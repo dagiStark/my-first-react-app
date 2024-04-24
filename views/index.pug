@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  h1= title
+  if messages.length > 0
+    ul 
+      each message in messages
+        li 
+          | User: #{message.user}, Text: #{message.text}, Date: #{message.added}
+  else 
+    p No Messages Yet 
